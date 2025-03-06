@@ -1,0 +1,15 @@
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.csproj.AssemblyReference.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.AssemblyInfoInputs.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.AssemblyInfo.cs
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.csproj.CoreCompileInputs.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\bin\Debug\net6.0\StudentController.exe
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\bin\Debug\net6.0\StudentController.deps.json
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\bin\Debug\net6.0\StudentController.runtimeconfig.json
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\bin\Debug\net6.0\StudentController.dll
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\bin\Debug\net6.0\StudentController.pdb
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.dll
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\refint\StudentController.dll
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.pdb
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\StudentController.genruntimeconfig.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\StudentController\obj\Debug\net6.0\ref\StudentController.dll
