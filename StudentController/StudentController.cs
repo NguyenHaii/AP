@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Globalization;
 
 namespace StudentController
 {
@@ -13,12 +11,49 @@ namespace StudentController
         public void AddStudent()
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Console.Write("Nhập ID sinh viên: ");
-            string id = Console.ReadLine();
-            Console.Write("Nhập tên sinh viên: ");
-            string name = Console.ReadLine();
-            Console.Write("Nhập tuổi sinh viên: ");
-            int age = int.Parse(Console.ReadLine());
+
+            string id;
+            do
+            {
+                Console.Write("Nhập ID sinh viên (VD: ABC123): ");
+                id = Console.ReadLine();
+                if (!StudentValidator.IsValidId(id))
+                {
+                    Console.WriteLine("ID không hợp lệ! ID phải có 3 chữ cái in hoa + 2 số (VD: ABC123).");
+                }
+            } while (!StudentValidator.IsValidId(id));
+
+            string name;
+            do
+            {
+                Console.Write("Nhập tên sinh viên: ");
+                name = Console.ReadLine();
+                if (!StudentValidator.IsValidName(name))
+                {
+                    Console.WriteLine("Tên không hợp lệ! Tên phải có ít nhất 2 ký tự và không chứa số.");
+                }
+            } while (!StudentValidator.IsValidName(name));
+
+            int age;
+            do
+            {
+                Console.Write("Nhập tuổi sinh viên (18 - 100): ");
+                if (!int.TryParse(Console.ReadLine(), out age) || !StudentValidator.IsValidAge(age))
+                {
+                    Console.WriteLine("Tuổi không hợp lệ! Phải từ 18 đến 100.");
+                }
+            } while (!StudentValidator.IsValidAge(age));
+
+            string email;
+            do
+            {
+                Console.Write("Nhập email sinh viên: ");
+                email = Console.ReadLine();
+                if (!StudentValidator.IsValidEmail(email))
+                {
+                    Console.WriteLine("Email không hợp lệ! Hãy nhập đúng định dạng (VD: example@gmail.com).");
+                }
+            } while (!StudentValidator.IsValidEmail(email));
 
             Console.Write("Chọn giới tính (0: Nam, 1: Nữ): ");
             Gender gender = (Gender)int.Parse(Console.ReadLine());
@@ -50,8 +85,9 @@ namespace StudentController
                 }
             }
 
-            studentService.AddStudent(new Student(id, name, age, gender, subjects));
+            studentService.AddStudent(new Student(id, name, age, gender, email, subjects));
         }
+
 
         public void DisplayStudents()
         {

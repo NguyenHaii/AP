@@ -9,6 +9,6 @@ namespace StudentController
     enum Gender
     {
         Nam,
-        Nữ
+        Nữ,
     }
 }

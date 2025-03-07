@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Globalization;
 
 namespace StudentController
 {
@@ -17,7 +16,8 @@ namespace StudentController
         public void AddStudent(Student student)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            if (string.IsNullOrWhiteSpace(student.Id) || string.IsNullOrWhiteSpace(student.Name) || student.Subjects.Count == 0)
+            if (string.IsNullOrWhiteSpace(student.Id) || string.IsNullOrWhiteSpace(student.Name) ||
+                string.IsNullOrWhiteSpace(student.Email) || student.Subjects.Count == 0)
             {
                 Console.WriteLine("Thông tin sinh viên không hợp lệ!");
                 return;
@@ -27,14 +27,12 @@ namespace StudentController
         }
 
         public void DisplayStudents()
-        {
+        {        
             foreach (var student in students)
             {
                 student.Display();
             }
         }
-
-
 
         public void SearchBySubject(int subjectIndex)
         {
@@ -54,7 +52,10 @@ namespace StudentController
             else
             {
                 Console.WriteLine("\nDanh sách sinh viên học môn " + subject + ":");
-                DisplayStudents();
+                foreach (var student in filteredStudents)
+                {
+                    student.Display();
+                }
             }
         }
 
@@ -68,7 +69,10 @@ namespace StudentController
             else
             {
                 Console.WriteLine("\nDanh sách sinh viên giới tính " + gender + ":");
-                DisplayStudents();
+                foreach (var student in filteredStudents)
+                {
+                    student.Display();
+                }
             }
         }
     }
