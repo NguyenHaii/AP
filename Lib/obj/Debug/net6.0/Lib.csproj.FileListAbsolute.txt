@@ -1,0 +1,15 @@
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\bin\Debug\net6.0\Lib.exe
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\bin\Debug\net6.0\Lib.deps.json
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\bin\Debug\net6.0\Lib.runtimeconfig.json
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\bin\Debug\net6.0\Lib.dll
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\bin\Debug\net6.0\Lib.pdb
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.csproj.AssemblyReference.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.AssemblyInfoInputs.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.AssemblyInfo.cs
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.csproj.CoreCompileInputs.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.dll
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\refint\Lib.dll
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.pdb
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\Lib.genruntimeconfig.cache
+C:\Users\student\Downloads\Lab103_DMA_De2_STUDENT1406196\Lib\obj\Debug\net6.0\ref\Lib.dll
