@@ -1,0 +1,14 @@
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\bin\Debug\net8.0\AsyncAwait.exe
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\bin\Debug\net8.0\AsyncAwait.deps.json
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\bin\Debug\net8.0\AsyncAwait.runtimeconfig.json
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\bin\Debug\net8.0\AsyncAwait.dll
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\bin\Debug\net8.0\AsyncAwait.pdb
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.AssemblyInfoInputs.cache
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.AssemblyInfo.cs
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.dll
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\refint\AsyncAwait.dll
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.pdb
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\AsyncAwait.genruntimeconfig.cache
+C:\Users\admin\Downloads\AsyncAwait\AsyncAwait\obj\Debug\net8.0\ref\AsyncAwait.dll
