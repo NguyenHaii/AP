@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZeSi0SJWukdW0CtWlkycXhTO30XpKxWSsiI35n+mrxnEPbRh7UvArfKIkmcdItlI5g+qG217UD3pKFgHFQqGoA==",
+  "dgSpecHash": "NLgpr9AHivn7cnXMhR18pYqVp3SZgJVH1AXKWMKoivluna9PWcWKPUhGhS2AlOn2Y2jTZsu4YxcIt9A+7Hgssw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\student\\Downloads\\AP-master\\StudentController\\StudentController.csproj",
+  "projectFilePath": "C:\\Users\\student\\source\\repos\\StudentController\\StudentController.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
