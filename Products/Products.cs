@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -45,14 +45,11 @@ class Program
 
     static void AddProduct()
     {
-        Console.Write("Nhập ID: ");
-        int id = int.Parse(Console.ReadLine());
+        int id = GetValidInt("Nhập ID: ");
         Console.Write("Nhập tên sản phẩm: ");
-        string name = Console.ReadLine();
-        Console.Write("Nhập giá: ");
-        double price = double.Parse(Console.ReadLine());
-        Console.Write("Nhập số lượng: ");
-        int quantity = int.Parse(Console.ReadLine());
+        string name = Console.ReadLine().Trim();
+        double price = GetValidDouble("Nhập giá: ");
+        int quantity = GetValidInt("Nhập số lượng: ");
         
         products.Add(new Product { ID = id, Name = name, Price = price, Quantity = quantity });
         Console.WriteLine("Đã thêm sản phẩm thành công!");
@@ -60,7 +57,7 @@ class Program
 
     static void DisplayProducts()
     {
-        if (products.Count == 0)
+        if (!products.Any())
         {
             Console.WriteLine("Danh sách sản phẩm trống!");
             return;
@@ -75,10 +72,10 @@ class Program
     static void SearchProduct()
     {
         Console.Write("Nhập tên sản phẩm cần tìm: ");
-        string name = Console.ReadLine();
+        string name = Console.ReadLine().Trim();
         var results = products.Where(p => p.Name.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
         
-        if (results.Count == 0)
+        if (!results.Any())
         {
             Console.WriteLine("Không tìm thấy sản phẩm!");
         }
@@ -94,8 +91,7 @@ class Program
 
     static void RemoveProduct()
     {
-        Console.Write("Nhập ID sản phẩm cần xóa: ");
-        int id = int.Parse(Console.ReadLine());
+        int id = GetValidInt("Nhập ID sản phẩm cần xóa: ");
         var product = products.FirstOrDefault(p => p.ID == id);
         
         if (product != null)
@@ -117,23 +113,44 @@ class Program
 
     static void UpdateProduct()
     {
-        Console.Write("Nhập ID sản phẩm cần sửa: ");
-        int id = int.Parse(Console.ReadLine());
+        int id = GetValidInt("Nhập ID sản phẩm cần sửa: ");
         var product = products.FirstOrDefault(p => p.ID == id);
         
         if (product != null)
         {
             Console.Write("Nhập tên mới: ");
-            product.Name = Console.ReadLine();
-            Console.Write("Nhập giá mới: ");
-            product.Price = double.Parse(Console.ReadLine());
-            Console.Write("Nhập số lượng mới: ");
-            product.Quantity = int.Parse(Console.ReadLine());
+            product.Name = Console.ReadLine().Trim();
+            product.Price = GetValidDouble("Nhập giá mới: ");
+            product.Quantity = GetValidInt("Nhập số lượng mới: ");
             Console.WriteLine("Thông tin sản phẩm đã được cập nhật!");
         }
         else
         {
             Console.WriteLine("Không tìm thấy sản phẩm!");
+        }
+    }
+
+    static int GetValidInt(string message)
+    {
+        int value;
+        while (true)
+        {
+            Console.Write(message);
+            if (int.TryParse(Console.ReadLine(), out value) && value >= 0)
+                return value;
+            Console.WriteLine("Vui lòng nhập một số nguyên hợp lệ!");
+        }
+    }
+
+    static double GetValidDouble(string message)
+    {
+        double value;
+        while (true)
+        {
+            Console.Write(message);
+            if (double.TryParse(Console.ReadLine(), out value) && value >= 0)
+                return value;
+            Console.WriteLine("Vui lòng nhập một số hợp lệ!");
         }
     }
 }
