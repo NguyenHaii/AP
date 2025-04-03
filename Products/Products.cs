@@ -183,4 +183,156 @@ class Program
 //             return Regex.IsMatch(email, @"^[\w\.-]+@[\w\.-]+\.\w+$");
 //         }
 //     }
-// }
+// }  
+
+
+//Tính tiền xe cộ 
+
+using System;
+
+// ========================== INTERFACE ICar ==========================
+public interface ICar
+{
+    float CalculateTax();
+    float CalculatePrice();
+    void GetInfor();
+}
+
+// ========================== CLASS Car ==========================
+public class Car : ICar
+{
+    // Private fields
+    private string name;
+    private string producer;
+    private int year;
+    private int seat;
+    private float rootPrice;
+
+    // Public properties
+    public string Name { get => name; set => name = value; }
+    public string Producer { get => producer; set => producer = value; }
+    public int Year
+    {
+        get => year;
+        set
+        {
+            if (value < 1900)
+                throw new ArgumentException("Year must be greater than 1900");
+            year = value;
+        }
+    }
+    public int Seat
+    {
+        get => seat;
+        set
+        {
+            if (value < 0 || value > 200)
+                throw new ArgumentException("Seat count must be between 0 and 200");
+            seat = value;
+        }
+    }
+    public float RootPrice
+    {
+        get => rootPrice;
+        set
+        {
+            if (value <= 0)
+                throw new ArgumentException("Root price must be greater than 0");
+            rootPrice = value;
+        }
+    }
+
+    // Constructor
+    public Car(string name, string producer, int year, int seat, float rootPrice)
+    {
+        Name = name;
+        Producer = producer;
+        Year = year;
+        Seat = seat;
+        RootPrice = rootPrice;
+    }
+
+    // Implement CalculateTax method
+    public float CalculateTax()
+    {
+        return (Seat < 7) ? RootPrice * 0.6f : RootPrice * 0.7f;
+    }
+
+    // Implement CalculatePrice method
+    public virtual float CalculatePrice()
+    {
+        return RootPrice + CalculateTax();
+    }
+
+    // Implement GetInfor method
+    public void GetInfor()
+    {
+        Console.WriteLine($"{Name} car produced by {Producer} in {Year} has {Seat} seats with the total price is {CalculatePrice()}$.");
+    }
+}
+
+// ========================== CLASS LuxuryCar ==========================
+public class LuxuryCar : Car
+{
+    // Public field with default value
+    public float SpecialRate { get; set; } = 0.8f;
+
+    // Constructor
+    public LuxuryCar(string name, string producer, int year, int seat, float rootPrice, float specialRate = 0.8f)
+        : base(name, producer, year, seat, rootPrice)
+    {
+        SpecialRate = specialRate;
+    }
+
+    // Override CalculatePrice method
+    public override float CalculatePrice()
+    {
+        return base.CalculatePrice() + RootPrice * SpecialRate;
+    }
+
+    // Overload CalculatePrice method with transport cost
+    public float CalculatePrice(float transportCost)
+    {
+        return base.CalculatePrice() + RootPrice * SpecialRate + transportCost;
+    }
+}
+
+// ========================== CLASS Test (Main Program) ==========================
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            // Input values
+            Console.Write("Enter Car Name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter Producer: ");
+            string producer = Console.ReadLine();
+
+            Console.Write("Enter Year: ");
+            int year = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Number of Seats: ");
+            int seat = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Root Price: ");
+            float rootPrice = float.Parse(Console.ReadLine());
+
+            // Create an instance of LuxuryCar
+            LuxuryCar myLuxuryCar = new LuxuryCar(name, producer, year, seat, rootPrice);
+
+            // Display information
+            myLuxuryCar.GetInfor();
+
+            // Calculate and display total price with transport cost = 20000$
+            float totalPriceWithTransport = myLuxuryCar.CalculatePrice(20000);
+            Console.WriteLine($"With cost of transportation is 20000$, the total price is {totalPriceWithTransport}$.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
